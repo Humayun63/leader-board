@@ -135,14 +135,37 @@ height: 104px;
 
 /* RESPONSIVENESS */
 /* SMALL DEVICE */
-@media screen and (max-width:576px) {
-    
+@media only screen and (max-width:668px) {
+    .container{
+        width: 100%;
+    }
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .player, .blog, .course{
+        flex-direction: column;
+    }
+    .course{
+        width: 100%;
+    }
+    .blog img,
+    .courses img{
+        width: 100%;
+        height: auto;
+    }
+    .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
-/* MEDIUM DEVICE */
-@media screen and (min-width:577px) and (max-width:768px) {
-    
-}
-/* LARGE DEVICE */
-@media screen and (min-width:578px) and (max-width:992px) {
-    
+/* tablet device */
+@media only screen and (min-width:669px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .player{
+        flex-direction: column;
+    }
+    .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
